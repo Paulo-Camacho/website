@@ -1,0 +1,59 @@
+body {
+    /* I like Iosevka for programming and JetBrains to look at. */
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 2rem 1.5rem;
+    /* Adds a bit of padding to edges on mobile text */
+    text-align: center;
+}
+
+figure {
+    margin: 1.5rem auto;
+    text-align: center;
+}
+
+p {
+    text-align: left;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    display: block;        /* Necessary for margin auto to center properly */
+    margin: 0 auto;
+    object-fit: cover;  /* Prevents stretching, keeps original shape */
+    /* aspect-ratio: 1 / 1; */
+}
+
+#nasa-container {
+    display: block;
+    margin: 1.5rem auto;
+    text-align: center;
+}
+
+/* Square output of nasa api, be that video or image */
+#nasa-container img,
+#nasa-container video,
+#nasa-container iframe {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover; /* CLean wrap around the desired box */
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px;
+}
+
+@media (orientation: portrait) {
+    img {
+        max-width: 350px;
+        width: 100%;
+        height: auto;
+    }
+}

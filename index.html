@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Paulo Camacho</title>
+    <link href="https://fonts.cdnfonts.com/css/jetbrains-mono-2" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    </head>
+    
+    <body>
+        <h1 style="font-size: 250%;">PAULO CAMACHO</h1>
+        <span id="list" style="display: inline;">
+            <i>
+                <a href="#" onclick="toggleAB('list', 'blogposts')">blogposts</a>
+                ·
+                <a href="#photos" onclick="toggleAB('list', 'photos')">photos that I enjoy looking at</a>
+                ·
+                <a href="#" onclick="toggleAB('list', 'contact')">contact</a>
+                ·
+                <a href="#" onclick="emailToClipboard()">copy my email</a>
+                ·
+                <a href="https://docs.google.com/document/d/1x3XaQzFeZpfBAf2bFHF-MFToyBIvtwav/edit" target="_blank">resume</a>
+            </i>
+        </span>
+
+        <span id="blogposts" style="display: none;">
+            <i>
+                <a href="#" onclick="toggleAB('list', 'blogposts')">blogposts</a>
+                ·
+                <a href="#photos" onclick="toggleAB('blogposts', 'photos')">photos that I enjoy looking at</a>
+                ·
+                <a href="#" onclick="toggleAB('blogposts', 'contact')">contact</a>
+                ·
+                <a href="#" onclick="emailToClipboard()">copy my email</a>
+                ·
+                <a href="https://docs.google.com/document/d/1x3XaQzFeZpfBAf2bFHF-MFToyBIvtwav/edit" target="_blank">resume</a>
+                <br>
+                <br>
+                <!--input blogposts data here-->
+                ·
+                <a
+                    href="https://www.linkedin.com/pulse/reducing-redundant-browser-work-open-source-software-maxun-camacho-z3oec/?trackingId=qqz8UTLAT4ORwNpQDkV2ig%3D%3D">Reducing
+                    Redundant Browser Work in Open-Source Software “Maxun”</a>
+            </i>
+        </span>
+
+        <span id="photos" style="display: none;">
+            <i>
+                <a href="#" onclick="toggleAB('photos', 'blogposts')">blogposts</a>
+                ·
+                <a href="#photos" onclick="toggleAB('list', 'photos')">photos that I enjoy looking at</a>
+                ·
+                <a href="#" onclick="toggleAB('photos', 'contact')">contact</a>
+                ·
+                <a href="#" onclick="emailToClipboard()">copy my email</a>
+                ·
+                <a href="https://docs.google.com/document/d/1x3XaQzFeZpfBAf2bFHF-MFToyBIvtwav/edit" target="_blank">resume</a>
+                
+                <br>
+                <br>
+                <!--input photo data here-->
+                
+                <figure>
+                    <img src="images/koi.jpeg" alt="Koi pond">
+                    <figcaption aria-hidden="true">Koi fish pond</figcaption>
+                </figure>
+                <br>
+                <figure>
+                    <img src="images/mercury65.jpg" alt="Mercury65">
+                    <figcaption aria-hidden="true">Mercury65</figcaption>
+                </figure>
+                <br>
+                
+                
+                <figure>
+                    <img src="images/tech.png" alt="Workstation">
+                    <figcaption aria-hidden="true">Workstation</figcaption>
+                </figure>
+                <br>
+
+                <figure>
+                    <img src="images/use-your-things.jpg" alt="“Use your things”">
+                    <figcaption aria-hidden="true">“Use your nicest things”</figcaption>
+                </figure>
+                <br>
+
+                <figure>
+                    <img src="images/havenhuis.jpg" alt="havenhuis">
+                    <figcaption aria-hidden="true">Havenhuis located in Antwerp, Belgium</figcaption>
+                </figure>
+            </i>
+        </span>
+
+        <span id="contact" style="display: none;">
+            <i>
+                <a href="#blogposts" onclick="toggleAB('contact', 'blogposts')">blogposts</a>
+                ·
+                <a href="#photos" onclick="toggleAB('contact', 'photos')">photos that I enjoy looking at</a>
+                ·
+                <a href="#contact" onclick="toggleAB('list', 'contact')">contact</a>
+                ·
+                <a href="#" onclick="emailToClipboard()">copy my email</a>
+                ·
+                <a href="https://docs.google.com/document/d/1x3XaQzFeZpfBAf2bFHF-MFToyBIvtwav/edit" target="_blank">resume</a>
+
+                <br>
+                <br>
+                <!--input contact data here-->
+                <a href="https://www.linkedin.com/in/paulo-camacho-541670338/" target="_blank">linkedin</a>
+                ·
+                <a href="https://github.com/Paulo-Camacho" target="_blank">github</a>
+            </i>
+        </span>
+
+        <br>
+        <br>
+        <!-- ------------------------------------------- -->
+
+        <div id="la-time"><p>Loading time in Los Angeles...</p></div>
+
+        <br>
+
+        Hey I'm
+        <span id="greeter-a" style="display: inline;"><a href="#greeter-b" onclick="toggleAB('greeter-a', 'greeter-b'); toggleNasa();""><i>Paulo!</i></a></span>
+        <span id="greeter-b" style="display: none;"><a href="#" onclick="toggleAB('greeter-a', 'greeter-b'); toggleNasa();"><i>Paulo!</i></a>
+            <p>i like to consider myself curious. i enjoy optimizing workflows, learning about tools on linux/unix systems,
+            and contribute to open source!</p>
+            <p>then i saw a 16k★ web scraper doing double the work it needed to. i refactored the engine to capture screenshots during the primary scraping pass instead of running a second browser navigation cut per page load times in half and got my code merged upstream!</p>
+            <p>went to a 48-hour hackathon, wired up EKG sensors to process biometric signals in real time, and walked away with first place!</p>
+            <p>currently competitive programming in ICPC (placed 7th in pacnw div 2), teaching python as a TA for CST 205</p>
+            <img src="images/profile.png" alt="Paulo" >
+        </span>
+
+        <br>
+        <br>
+
+        <div id="nasa-container" style="display: inline;">Loading Nasa's Image of the Day...</div>
+
+        <!--
+                <details>
+                <p>Click here for Author Bio</p>
+                <p>foo bar baz</p>
+                </details>-->
+
+        <br>
+        <br>
+        <hr>
+        <footer>PC</footer>
+
+</body>
+
+</html>
