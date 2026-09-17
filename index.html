@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
     </head>
-    
     <body>
         <h1 style="font-size: 250%;">PAULO CAMACHO</h1>
+        <h2 id="la-time">Loading time in Los Angeles...</h2>
+        <!-- This is the the defualt state of the app span. Whatever the user clicks gets passed into toggleAB and hands off the display (inline:none) -->
         <span id="list" style="display: inline;">
             <i>
                 <a href="#" onclick="toggleAB('list', 'blogposts')">blogposts</a>
@@ -116,11 +117,6 @@
 
         <br>
         <br>
-        <!-- ------------------------------------------- -->
-
-        <div id="la-time"><p>Loading time in Los Angeles...</p></div>
-
-        <br>
 
         Hey I'm
         <span id="greeter-a" style="display: inline;"><a href="#greeter-b" onclick="toggleAB('greeter-a', 'greeter-b'); toggleNasa();""><i>Paulo!</i></a></span>
@@ -137,14 +133,11 @@
         <br>
 
         <div id="nasa-container" style="display: inline;">Loading Nasa's Image of the Day...</div>
-
-        <!--
+<!--         
                 <details>
                 <p>Click here for Author Bio</p>
                 <p>foo bar baz</p>
-                </details>-->
-
-        <br>
+                </details> -->
         <br>
         <hr>
         <footer>PC</footer>
