@@ -9,34 +9,43 @@
     <script src="script.js" defer></script>
     </head>
     <body>
-        <h1 style="font-size: 250%;">PAULO CAMACHO</h1>
-        <h2 id="la-time">Loading time in Los Angeles...</h2>
-        <!-- This is the the defualt state of the app span. Whatever the user clicks gets passed into toggleAB and hands off the display (inline:none) -->
-        <span id="list" style="display: inline;">
-            <i>
-                <a href="#" onclick="toggleAB('list', 'blogposts')">blogposts</a>
-                ·
-                <a href="#photos" onclick="toggleAB('list', 'photos')">photos that I enjoy looking at</a>
-                ·
-                <a href="#" onclick="toggleAB('list', 'contact')">contact</a>
-                ·
-                <a href="#" onclick="emailToClipboard()">copy my email</a>
-                ·
-                <a href="https://docs.google.com/document/d/1x3XaQzFeZpfBAf2bFHF-MFToyBIvtwav/edit" target="_blank">resume</a>
-            </i>
-        </span>
+        <p style="font-size: 200%; text-align: center;">PAULO CAMACHO</p>
+        Hey I'm
+        <div id="greeter-a" style="display: inline;"><a href="#greeter-b" onclick="toggleAB('greeter-a', 'greeter-b'); toggleNasa();"><i>Paulo!</i></a></div>
+        <div id="greeter-b" style="display: none;"><a href="#"
+                onclick="toggleAB('greeter-a', 'greeter-b'); toggleNasa();"><i>Paulo!</i></a>
+            <p>i like to consider myself curious. i enjoy optimizing workflows, learning about tools on linux/unix systems,
+                and contribute to open source!</p>
+            <p>then i saw a 16k★ web scraper doing double the work it needed to. i refactored the engine to capture screenshots
+                during the primary scraping pass instead of running a second browser navigation cut per page load times in half
+                and got my code merged upstream!</p>
+            <p>went to a 48-hour hackathon, wired up EKG sensors to process biometric signals in real time, and walked away with
+                first place!</p>
+            <p>currently competitive programming in ICPC (placed 7th in pacnw div 2), teaching python as a TA for CST 205</p>
+            <img src="images/profile.png" alt="Paulo" style="max-width: 350px;">
+            <br>
+            <br>
+        </div>
 
-        <span id="blogposts" style="display: none;">
+        <p style="text-align: center;" id="la-time">Loading time in Los Angeles...</p>
+        <!-- This is the the defualt state of the app div. Whatever the user clicks gets passed into toggleAB and hands off the display (inline:none) -->
+        <div id="list" style="display: inline;">
+                <a href="#" onclick="toggleAB('list', 'blogposts')">blogposts</a>
+                <a href="#photos" onclick="toggleAB('list', 'photos')">photos that I enjoy looking at</a>
+                <a href="#" onclick="toggleAB('list', 'social_media')">social_media</a>
+                <a href="#" onclick="emailToClipboard()">copy_my_email</a>
+                <a href="https://docs.google.com/document/d/1x3XaQzFeZpfBAf2bFHF-MFToyBIvtwav/edit" target="_blank">resume</a>
+        </div>
+
+        <div id="blogposts" style="display: none;">
             <i>
                 <a href="#" onclick="toggleAB('list', 'blogposts')">blogposts</a>
-                ·
                 <a href="#photos" onclick="toggleAB('blogposts', 'photos')">photos that I enjoy looking at</a>
-                ·
-                <a href="#" onclick="toggleAB('blogposts', 'contact')">contact</a>
-                ·
-                <a href="#" onclick="emailToClipboard()">copy my email</a>
-                ·
+                <a href="#" onclick="toggleAB('blogposts', 'social_media')">social_media</a>
+                <a href="#" onclick="emailToClipboard()">copy_my_email</a>
                 <a href="https://docs.google.com/document/d/1x3XaQzFeZpfBAf2bFHF-MFToyBIvtwav/edit" target="_blank">resume</a>
+
+            </i>
                 <br>
                 <br>
                 <!--input blogposts data here-->
@@ -44,25 +53,19 @@
                 <a
                     href="https://www.linkedin.com/pulse/reducing-redundant-browser-work-open-source-software-maxun-camacho-z3oec/?trackingId=qqz8UTLAT4ORwNpQDkV2ig%3D%3D">Reducing
                     Redundant Browser Work in Open-Source Software “Maxun”</a>
-            </i>
-        </span>
+        </div>
 
-        <span id="photos" style="display: none;">
+        <div id="photos" style="display: none;">
             <i>
                 <a href="#" onclick="toggleAB('photos', 'blogposts')">blogposts</a>
-                ·
                 <a href="#photos" onclick="toggleAB('list', 'photos')">photos that I enjoy looking at</a>
-                ·
-                <a href="#" onclick="toggleAB('photos', 'contact')">contact</a>
-                ·
-                <a href="#" onclick="emailToClipboard()">copy my email</a>
-                ·
+                <a href="#" onclick="toggleAB('photos', 'social_media')">social_media</a>
+                <a href="#" onclick="emailToClipboard()">copy_my_email</a>
                 <a href="https://docs.google.com/document/d/1x3XaQzFeZpfBAf2bFHF-MFToyBIvtwav/edit" target="_blank">resume</a>
-                
+            </i>
                 <br>
                 <br>
                 <!--input photo data here-->
-                
                 <figure>
                     <img src="images/koi.jpeg" alt="Koi pond">
                     <figcaption aria-hidden="true">Koi fish pond</figcaption>
@@ -91,57 +94,33 @@
                     <img src="images/havenhuis.jpg" alt="havenhuis">
                     <figcaption aria-hidden="true">Havenhuis located in Antwerp, Belgium</figcaption>
                 </figure>
-            </i>
-        </span>
+            </div>
 
-        <span id="contact" style="display: none;">
+        <div id="social_media" style="display: none;">
             <i>
-                <a href="#blogposts" onclick="toggleAB('contact', 'blogposts')">blogposts</a>
-                ·
-                <a href="#photos" onclick="toggleAB('contact', 'photos')">photos that I enjoy looking at</a>
-                ·
-                <a href="#contact" onclick="toggleAB('list', 'contact')">contact</a>
-                ·
-                <a href="#" onclick="emailToClipboard()">copy my email</a>
-                ·
+                <a href="#blogposts" onclick="toggleAB('social_media', 'blogposts')">blogposts</a>
+                <a href="#photos" onclick="toggleAB('social_media', 'photos')">photos that I enjoy looking at</a>
+                <a href="#social_media" onclick="toggleAB('list', 'social_media')">social_media</a>
+                <a href="#" onclick="emailToClipboard()">copy_my_email</a>
                 <a href="https://docs.google.com/document/d/1x3XaQzFeZpfBAf2bFHF-MFToyBIvtwav/edit" target="_blank">resume</a>
 
                 <br>
                 <br>
-                <!--input contact data here-->
+                <!--input social_media data here-->
                 <a href="https://www.linkedin.com/in/paulo-camacho-541670338/" target="_blank">linkedin</a>
-                ·
                 <a href="https://github.com/Paulo-Camacho" target="_blank">github</a>
             </i>
-        </span>
+        </div>
 
         <br>
         <br>
-
-        Hey I'm
-        <span id="greeter-a" style="display: inline;"><a href="#greeter-b" onclick="toggleAB('greeter-a', 'greeter-b'); toggleNasa();""><i>Paulo!</i></a></span>
-        <span id="greeter-b" style="display: none;"><a href="#" onclick="toggleAB('greeter-a', 'greeter-b'); toggleNasa();"><i>Paulo!</i></a>
-            <p>i like to consider myself curious. i enjoy optimizing workflows, learning about tools on linux/unix systems,
-            and contribute to open source!</p>
-            <p>then i saw a 16k★ web scraper doing double the work it needed to. i refactored the engine to capture screenshots during the primary scraping pass instead of running a second browser navigation cut per page load times in half and got my code merged upstream!</p>
-            <p>went to a 48-hour hackathon, wired up EKG sensors to process biometric signals in real time, and walked away with first place!</p>
-            <p>currently competitive programming in ICPC (placed 7th in pacnw div 2), teaching python as a TA for CST 205</p>
-            <img src="images/profile.png" alt="Paulo" >
-        </span>
-
-        <br>
-        <br>
-
-        <div id="nasa-container" style="display: inline;">Loading Nasa's Image of the Day...</div>
+<!-- <div id="nasa-container" style="display: inline;">...</div> -->
 <!--         
                 <details>
                 <p>Click here for Author Bio</p>
                 <p>foo bar baz</p>
                 </details> -->
-        <br>
-        <hr>
-        <footer>PC</footer>
-
+<hr>
+<footer>PC</footer>
 </body>
-
 </html>
