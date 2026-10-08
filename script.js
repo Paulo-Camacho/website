@@ -1,14 +1,14 @@
 // 1000 == 1 second
 setInterval(updateLATime, 1000);
 updateLATime();
-fetchNasa();
+// fetchNasa();
 
-function toggleNasa() {
-  const nasa = document.getElementById('nasa-container');
-  const current = getComputedStyle(nasa).display;
-
-  nasa.style.display = current === 'none' ? 'inline' : 'none';
-}
+// function toggleNasa() {
+//   const nasa = document.getElementById('nasa-container');
+//   const current = getComputedStyle(nasa).display;
+//
+//   nasa.style.display = current === 'none' ? 'inline' : 'none';
+// }
 
 function updateLATime()
 {
@@ -17,19 +17,19 @@ function updateLATime()
     hour: '2-digit',
     minute: '2-digit',
     second: '2-digit',
-    hour12: true,
+    // hour12: true,
   };
   const now = new Date();
-  const laTime = new Intl.DateTimeFormat('en-US', options).format(now);
+  const laTime = new Intl.DateTimeFormat('en-US', options).format(now).toLowerCase();
 
   const today = new Date();
   const formattedDate = today.toLocaleDateString('en-US', {
-    weekday: 'short',
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
+    // weekday: 'short',
+    // year: 'numeric',
+    // month: 'long',
+    // day: 'numeric'
   });
-  document.getElementById('la-time').textContent = `Los Angeles · ${formattedDate} ${laTime} PST`;
+  document.getElementById('la-time').textContent = `${formattedDate} ${laTime} LA`;
 }
 
 function toggleAB(before, after) {
@@ -42,7 +42,7 @@ function toggleAB(before, after) {
     prev.style.display = "inline";
     next.style.display = "none";
   }
-  console.log("toggleAB ran");
+  // console.log("toggleAB ran");
 }
 
 function emailToClipboard() {
@@ -50,35 +50,35 @@ function emailToClipboard() {
   alert("paulocamachodev@gmail.com copied to clipboard");
 }
 
-function fetchNasa() {
-  const nasaContainer = document.getElementById('nasa-container');
-  if (!nasaContainer) return;
-
-  const MAX_WIDTH = "300px";
-
-  const apiKey = "2chhj1QzxvfYe72oA2Mmvqg3wmEyJ20aHDefx2Sj";
-  const url = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&thumbs=true`;
-
-  fetch(url)
-    .then(res => res.json())
-    .then(data => {
-      let mediaHtml = '';
-      const mediaUrl = data.thumbnail_url || data.url;
-
-      if (data.media_type === 'image' || data.thumbnail_url) {
-        mediaHtml = `<img src="${mediaUrl}" alt="${data.title}" loading="eager" fetchpriority="high">`;
-      } else if (data.url.includes('.mp4') || data.url.includes('.webm')) {
-        mediaHtml = `<video src="${data.url}" controls autoplay loop muted></video>`;
-      } else {
-        mediaHtml = `<iframe src="${data.url}" allowfullscreen style="border: none;"></iframe>`;
-      }
-
-      // margin: 0 auto handles centering the inner div wrapper
-      nasaContainer.innerHTML = `
-        <div style="max-width: ${MAX_WIDTH}; width: 100%; margin: 0 auto;">
-          <p style="margin-top: 8px; font-size: 0.9rem; text-align: center;">NASA's Image of the Day · ${data.title}</p>
-          ${mediaHtml}
-        </div>`;
-    })
-    .catch(err => console.error("NASA Fetch Error:", err));
-}
+// function fetchNasa() {
+//   const nasaContainer = document.getElementById('nasa-container');
+//   if (!nasaContainer) return;
+//
+//   const MAX_WIDTH = "300px";
+//
+//   const apiKey = "2chhj1QzxvfYe72oA2Mmvqg3wmEyJ20aHDefx2Sj";
+//   const url = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&thumbs=true`;
+//
+//   fetch(url)
+//     .then(res => res.json())
+//     .then(data => {
+//       let mediaHtml = '';
+//       const mediaUrl = data.thumbnail_url || data.url;
+//
+//       if (data.media_type === 'image' || data.thumbnail_url) {
+//         mediaHtml = `<img src="${mediaUrl}" alt="${data.title}" loading="eager" fetchpriority="high">`;
+//       } else if (data.url.includes('.mp4') || data.url.includes('.webm')) {
+//         mediaHtml = `<video src="${data.url}" controls autoplay loop muted></video>`;
+//       } else {
+//         mediaHtml = `<iframe src="${data.url}" allowfullscreen style="border: none;"></iframe>`;
+//       }
+//
+//       // margin: 0 auto handles centering the inner div wrapper
+//       nasaContainer.innerHTML = `
+//         <div style="max-width: ${MAX_WIDTH}; width: 100%; margin: 0 auto;">
+//           <p style="margin-top: 8px; font-size: 0.9rem; text-align: center;">NASA's Image of the Day · ${data.title}</p>
+//           ${mediaHtml}
+//         </div>`;
+//     })
+//     .catch(err => console.error("NASA Fetch Error:", err));
+// }
