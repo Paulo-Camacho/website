@@ -12,42 +12,45 @@ updateLATime();
 
 function updateLATime()
 {
-  const options = {
-    timeZone: 'America/Los_Angeles',
-    hour: '2-digit',
-    minute: '2-digit',
-    second: '2-digit',
-    // hour12: true,
-  };
-  const now = new Date();
-  const laTime = new Intl.DateTimeFormat('en-US', options).format(now).toLowerCase();
+    const options = {
+        timeZone: 'America/Los_Angeles',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: true,
+    };
+    const now = new Date();
+    const laTime = new Intl.DateTimeFormat('en-US', options)
+    .format(now)
+    .replace(/\s+/g, '')
+    .toLowerCase();
 
   const today = new Date();
-  const formattedDate = today.toLocaleDateString('en-US', {
-    // weekday: 'short',
-    // year: 'numeric',
-    // month: 'long',
-    // day: 'numeric'
-  });
-  document.getElementById('la-time').textContent = `${formattedDate} ${laTime} LA`;
+    const formattedDate = today.toLocaleDateString('en-US', {
+        // weekday: 'long',
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit'
+    });
+    document.getElementById('la-time').textContent = `${formattedDate} ${laTime} LA`;
 }
 
 function toggleAB(before, after) {
-  var prev = document.getElementById(before);
-  var next = document.getElementById(after);
-  if (prev.style.display === "inline") {
-    next.style.display = "inline";
-    prev.style.display = "none";
-  } else if (next.style.display === "inline") {
-    prev.style.display = "inline";
-    next.style.display = "none";
-  }
-  // console.log("toggleAB ran");
+    var prev = document.getElementById(before);
+    var next = document.getElementById(after);
+    if (prev.style.display === "inline") {
+        next.style.display = "inline";
+        prev.style.display = "none";
+    } else if (next.style.display === "inline") {
+        prev.style.display = "inline";
+        next.style.display = "none";
+    }
+    // console.log("toggleAB ran");
 }
 
 function emailToClipboard() {
-  navigator.clipboard.writeText("paulocamachodev@gmail.com");
-  alert("paulocamachodev@gmail.com copied to clipboard");
+    navigator.clipboard.writeText("paulocamachodev@gmail.com");
+    alert("paulocamachodev@gmail.com copied to clipboard");
 }
 
 // function fetchNasa() {

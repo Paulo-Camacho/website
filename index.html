@@ -9,15 +9,16 @@
     <script src="script.js" defer></script>
     </head>
     <body>
-        <p style="font-size: xx-large; text-align: center; margin-bottom: 0; margin-top: 0;">PAULO CAMACHO</p>
-        <p style="text-align: center; margin-top: 0;" id="la-time">Loading time in Los Angeles...</p>
+        <p id="header"><a href="#"><i>Paulo Camacho</i></a></p>
+        <p style="text-align: center; margin-top: 5px;" id="la-time">Loading time in Los Angeles...</p>
         <br>
         <br>
-        <br>
-        Hey I'm
-        <div id="greeter-a" style="display: inline;"><a href="#greeter-b" onclick="toggleAB('greeter-a', 'greeter-b');"><i>Paulo!</i></a></div>
-        <div id="greeter-b" style="display: none;"><a href="#"
-                onclick="toggleAB('greeter-a', 'greeter-b');"><i>Paulo!</i></a>
+        <div id="greeter-a" style="display: inline; text-decoration: underline; "><a href="#greeter-b" onclick="toggleAB('greeter-a', 'greeter-b');">
+        hey, i'm <i>paulo!</i></a></div>
+
+        <div id="greeter-b" style="display: none;"><a href="#" onclick="toggleAB('greeter-a', 'greeter-b');">
+        hey, i'm <i>paulo!</i></a>
+
             <p>i like to consider myself curious. i enjoy optimizing workflows, learning about tools on linux/unix systems,
                 and contribute to open source!</p>
             <p>then i saw a 16k★ web scraper doing double the work it needed to. i refactored the engine to capture screenshots
@@ -26,119 +27,80 @@
             <p>went to a 48-hour hackathon, wired up EKG sensors to process biometric signals in real time, and walked away with
                 first place!</p>
             <p>currently competitive programming in ICPC (placed 7th in pacnw div 2), teaching python as a TA for CST 205</p>
-            <img src="images/profile.png" alt="Paulo" style="max-width: 350px;">
-            <br>
-            <br>
+            <img src="images/profile.png" alt="Paulo" style="max-width: 300px;">
         </div>
-        <br>
         <br>
         <br>
 
         <!-- This is the the defualt state of the app div. Whatever the user clicks gets passed into toggleAB and hands off the display (inline:none) -->
         <div id="list" style="display: inline;">
-                <a href="#" onclick="toggleAB('list', 'blogposts')">blogposts</a>
-                /
-                <a href="#photos" onclick="toggleAB('list', 'photos')">photos that I enjoy looking at</a>
-                /
-                <a href="#" onclick="toggleAB('list', 'social_media')">social_media</a>
-                /
-                <a href="#" onclick="emailToClipboard()">copy_my_email</a>
-                /
-                <a href="https://docs.google.com/document/d/1x3XaQzFeZpfBAf2bFHF-MFToyBIvtwav/edit" target="_blank">resume</a>
+                <p><a href="#" onclick="toggleAB('list', 'blogposts')">blogposts</a></p>
+                <p><a href="#start-of-photos" onclick="toggleAB('list', 'photos')">photos_that_i_enjoy_looking_at</a></p>
+                <p><a href="#" onclick="toggleAB('list', 'social_media')">social_media</a></p>
+                <p><a href="#" onclick="emailToClipboard()">copy_my_email</a></p>
+                <p><a href="https://docs.google.com/document/d/1x3XaQzFeZpfBAf2bFHF-MFToyBIvtwav/edit" target="_blank">resume</a></p>
         </div>
 
         <div id="blogposts" style="display: none;">
-                <a href="#" onclick="toggleAB('list', 'blogposts')">blogposts</a>
-                /
-                <a href="#photos" onclick="toggleAB('blogposts', 'photos')">photos that I enjoy looking at</a>
-                /
-                <a href="#" onclick="toggleAB('blogposts', 'social_media')">social_media</a>
-                /
-                <a href="#" onclick="emailToClipboard()">copy_my_email</a>
-                /
-                <a href="https://docs.google.com/document/d/1x3XaQzFeZpfBAf2bFHF-MFToyBIvtwav/edit" target="_blank">resume</a>
+                <p><a href="#" onclick="toggleAB('list', 'blogposts')">blogposts</a></p>
 
-                <br>
-                <br>
                 <!--input blogposts data here-->
-                ·
-                <a
-                    href="https://www.linkedin.com/pulse/reducing-redundant-browser-work-open-source-software-maxun-camacho-z3oec/?trackingId=qqz8UTLAT4ORwNpQDkV2ig%3D%3D">Reducing
-                    Redundant Browser Work in Open-Source Software “Maxun”</a>
+                <p>
+                <a href="https://www.linkedin.com/pulse/reducing-redundant-browser-work-open-source-software-maxun-camacho-z3oec/?trackingId=qqz8UTLAT4ORwNpQDkV2ig%3D%3D">
+                    • Reducing Redundant Browser Work in Open-Source Software “Maxun”</a></p>
+
+
+
+                <p><a href="#start-of-photos" onclick="toggleAB('blogposts', 'photos')">photos_that_i_enjoy_looking_at</a></p>
+                <p><a href="#" onclick="toggleAB('blogposts', 'social_media')">social_media</a></p>
+                <p><a href="#" onclick="emailToClipboard()">copy_my_email</a></p>
+                <p><a href="https://docs.google.com/document/d/1x3XaQzFeZpfBAf2bFHF-MFToyBIvtwav/edit" target="_blank">resume</a></p>
         </div>
 
         <div id="photos" style="display: none;">
-                <a href="#" onclick="toggleAB('photos', 'blogposts')">blogposts</a>
-                /
-                <a href="#photos" onclick="toggleAB('list', 'photos')">photos that I enjoy looking at</a>
-                /
-                <a href="#" onclick="toggleAB('photos', 'social_media')">social_media</a>
-                /
-                <a href="#" onclick="emailToClipboard()">copy_my_email</a>
-                /
-                <a href="https://docs.google.com/document/d/1x3XaQzFeZpfBAf2bFHF-MFToyBIvtwav/edit" target="_blank">resume</a>
-
-                <br>
-                <br>
+                <p><a href="#" onclick="toggleAB('photos', 'blogposts')">blogposts</a></p>
+                <p><a href="#" onclick="toggleAB('list', 'photos')">photos_that_i_enjoy_looking_at</a></p>
                 <!--input photo data here-->
-                <figure>
+                <figure id="start-of-photos">
                     <img src="images/koi.jpeg" alt="Koi pond">
                     <figcaption aria-hidden="true">Koi fish pond</figcaption>
                 </figure>
-                <br>
                 <figure>
                     <img src="images/mercury65.jpg" alt="Mercury65">
                     <figcaption aria-hidden="true">Mercury65</figcaption>
                 </figure>
-                <br>
                 
                 
                 <figure>
                     <img src="images/tech.png" alt="Workstation">
                     <figcaption aria-hidden="true">Workstation</figcaption>
                 </figure>
-                <br>
 
                 <figure>
                     <img src="images/use-your-things.jpg" alt="“Use your things”">
                     <figcaption aria-hidden="true">“Use your nicest things”</figcaption>
                 </figure>
-                <br>
 
                 <figure>
                     <img src="images/havenhuis.jpg" alt="havenhuis">
                     <figcaption aria-hidden="true">Havenhuis located in Antwerp, Belgium</figcaption>
                 </figure>
+                <p><a href="#" onclick="toggleAB('photos', 'social_media')">social_media</a></p>
+                <p><a href="#" onclick="emailToClipboard()">copy_my_email</a></p>
+                <p><a href="https://docs.google.com/document/d/1x3XaQzFeZpfBAf2bFHF-MFToyBIvtwav/edit" target="_blank">resume</a></p>
             </div>
 
         <div id="social_media" style="display: none;">
-                <a href="#blogposts" onclick="toggleAB('social_media', 'blogposts')">blogposts</a>
-                /
-                <a href="#photos" onclick="toggleAB('social_media', 'photos')">photos that I enjoy looking at</a>
-                /
-                <a href="#social_media" onclick="toggleAB('list', 'social_media')">social_media</a>
-                /
-                <a href="#" onclick="emailToClipboard()">copy_my_email</a>
-                /
-                <a href="https://docs.google.com/document/d/1x3XaQzFeZpfBAf2bFHF-MFToyBIvtwav/edit" target="_blank">resume</a>
-
-                <br>
-                <br>
+                <p><a href="#" onclick="toggleAB('social_media', 'blogposts')">blogposts</a></p>
+                <p><a href="#start-of-photos" onclick="toggleAB('social_media', 'photos')">photos_that_i_enjoy_looking_at</a></p>
+                <p><a href="#" onclick="toggleAB('list', 'social_media')">social_media</a></p>
                 <!--input social_media data here-->
-                <a href="https://www.linkedin.com/in/paulo-camacho-541670338/" target="_blank">linkedin</a>
-                /
-                <a href="https://github.com/Paulo-Camacho" target="_blank">github</a>
+                <p><a href="https://www.linkedin.com/in/paulo-camacho-541670338/" target="_blank">• linkedin</a></p>
+                <p><a href="https://github.com/Paulo-Camacho" target="_blank">• github</a></p>
+
+                <p><a href="#" onclick="emailToClipboard()">copy_my_email</a></p>
+                <p><a href="https://docs.google.com/document/d/1x3XaQzFeZpfBAf2bFHF-MFToyBIvtwav/edit" target="_blank">resume</a></p>
         </div>
 
-        <br>
-        <br>
-        <br>
-<!-- <div id="nasa-container" style="display: inline;">...</div> -->
-<!--         
-                <details>
-                <p>Click here for Author Bio</p>
-                <p>foo bar baz</p>
-                </details> -->
-<footer>pc</footer>
 </body>
 </html>
