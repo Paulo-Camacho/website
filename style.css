@@ -1,19 +1,21 @@
 body {
     /* I like Iosevka for programming and JetBrains to look at. */
     font-family: 'JetBrains Mono', monospace;
-    /* font-weight: 700; */
     /* margin : top right bottom left AUTO horizontally centers it in respects to parent container*/
     margin: 0 auto;
-    max-width: 350px;
+    max-width: 250px;
     /* padding: top left right bottom */
-    padding-top: 4rem;
-    font-size: small;
+    font-size: 0.8rem;
     text-align: justify;
     /* text-align: center; */
     word-wrap: break-word;
     background: #000000;
     color: #ffffff;
     animation: blurred 0.4s ease-out;
+}
+
+p {
+    padding-top: 3%;
 }
 
 @keyframes blurred {
@@ -26,7 +28,6 @@ html {
 html::-webkit-scrollbar {
     display: none;                /* Safari and older Chrome/Edge */
 }
-
 
 ::-moz-selection { /* Code for Firefox */
     color: black;
@@ -43,10 +44,9 @@ html::-webkit-scrollbar {
     font-size: xx-large; 
     text-align: center;
     margin-bottom: 0; 
-    margin-top: 0;
+    margin-top: 12vh;
+    margin-top: 12svh;
 }
-
-
 
 a {
     text-decoration: none;
@@ -106,16 +106,33 @@ img {
 
 @media (orientation: portrait) {
     body {
-        padding-top: 8rem;
         padding-left: 1rem;
         padding-right: 1rem;
         max-width: 400px;
-        font-size: medium;
+        font-size: 0.8rem;
         animation: blurred 0.3s ease-out;
     }
     img {
         max-width: 350px;
         width: 100%;
         height: auto;
+    }
+    #header {
+        margin-top: 15vh;
+        margin-top: 15svh;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    body {
+        margin-top: 15vh;
+        margin-top: 15svh;
+        font-size: x-large;
+        max-width: 350px;
+    }
+    #header {
+        font-size: 5rem;
+        margin-top: 10vh;
+        margin-top: 10svh;
     }
 }

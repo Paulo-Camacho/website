@@ -9,17 +9,16 @@
     <script src="script.js" defer></script>
     </head>
     <body>
-        <p id="header"><a href="#"><i>Paulo Camacho</i></a></p>
-        <p style="text-align: center; margin-top: 5px;" id="la-time">Loading time in Los Angeles...</p>
-        <br>
+        <p id="header"><a href=""><i>Paulo</i></a></p>
+        <p style="text-align: center; margin-top: 8px;" id="la-time">Loading time in Los Angeles...</p>
         <br>
         <br>
 
-        <div id="greeter-a" style="display: inline; text-decoration: underline; "><a href="#greeter-b" onclick="toggleAB('greeter-a', 'greeter-b');">
-        <p>hey, i'm <i>paulo!</i></a></p></div>
+        <div id="greeter-a" style="display: inline; text-decoration: underline; "><a href="#" onclick="toggleAB('greeter-a', 'greeter-b');">
+        <p>hey,_i'm <i>paulo!</i></p></a></div>
 
         <div id="greeter-b" style="display: none;"><a href="#" onclick="toggleAB('greeter-a', 'greeter-b');">
-        <p>hey, i'm <i>paulo!</i></a></p>
+        <p>hey,_i'm <i>paulo!</i></p></a>
 
             <p>i like to consider myself curious. i enjoy optimizing workflows, learning about tools on linux/unix systems,
                 and contribute to open source!</p>
@@ -35,7 +34,7 @@
         <!-- This is the the defualt state of the app div. Whatever the user clicks gets passed into toggleAB and hands off the display (inline:none) -->
         <div id="list" style="display: inline;">
                 <p><a href="#" onclick="toggleAB('list', 'blogposts')">blogposts</a></p>
-                <p><a href="#start-of-photos" onclick="toggleAB('list', 'photos')">photos_that_i_enjoy_looking_at</a></p>
+                <p><a href="#" onclick="toggleAB('list', 'photos')">photos_that_i_enjoy_looking_at</a></p>
                 <p><a href="#" onclick="toggleAB('list', 'social_media')">social_media</a></p>
                 <p><a href="#" onclick="emailToClipboard()">copy_my_email</a></p>
                 <p><a href="https://docs.google.com/document/d/1x3XaQzFeZpfBAf2bFHF-MFToyBIvtwav/edit" target="_blank">resume</a></p>
@@ -49,9 +48,7 @@
                 <a href="https://www.linkedin.com/pulse/reducing-redundant-browser-work-open-source-software-maxun-camacho-z3oec/?trackingId=qqz8UTLAT4ORwNpQDkV2ig%3D%3D">
                     • Reducing Redundant Browser Work in Open-Source Software “Maxun”</a></p>
 
-
-
-                <p><a href="#start-of-photos" onclick="toggleAB('blogposts', 'photos')">photos_that_i_enjoy_looking_at</a></p>
+                <p><a href="#" onclick="toggleAB('blogposts', 'photos')">photos_that_i_enjoy_looking_at</a></p>
                 <p><a href="#" onclick="toggleAB('blogposts', 'social_media')">social_media</a></p>
                 <p><a href="#" onclick="emailToClipboard()">copy_my_email</a></p>
                 <p><a href="https://docs.google.com/document/d/1x3XaQzFeZpfBAf2bFHF-MFToyBIvtwav/edit" target="_blank">resume</a></p>
@@ -61,7 +58,7 @@
                 <p><a href="#" onclick="toggleAB('photos', 'blogposts')">blogposts</a></p>
                 <p><a href="#" onclick="toggleAB('list', 'photos')">photos_that_i_enjoy_looking_at</a></p>
                 <!--input photo data here-->
-                <figure id="start-of-photos">
+                <figure>
                     <img src="images/koi.jpeg" alt="Koi pond">
                     <figcaption aria-hidden="true">Koi fish pond</figcaption>
                 </figure>
@@ -92,7 +89,7 @@
 
         <div id="social_media" style="display: none;">
                 <p><a href="#" onclick="toggleAB('social_media', 'blogposts')">blogposts</a></p>
-                <p><a href="#start-of-photos" onclick="toggleAB('social_media', 'photos')">photos_that_i_enjoy_looking_at</a></p>
+                <p><a href="#" onclick="toggleAB('social_media', 'photos')">photos_that_i_enjoy_looking_at</a></p>
                 <p><a href="#" onclick="toggleAB('list', 'social_media')">social_media</a></p>
                 <!--input social_media data here-->
                 <p><a href="https://www.linkedin.com/in/paulo-camacho-541670338/" target="_blank">• linkedin</a></p>
