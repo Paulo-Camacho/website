@@ -48,6 +48,16 @@ function toggleAB(before, after) {
     // console.log("toggleAB ran");
 }
 
+// tracks which section div is currently shown so any link can hide it
+var openPanel = 'list';
+
+function openSection(id) {
+    // always closes what is already open and then opens what user clicked
+    var target = (id === openPanel) ? 'list' : id;
+    toggleAB(openPanel, target);
+    openPanel = target;
+}
+
 function emailToClipboard() {
     navigator.clipboard.writeText("paulocamachodev@gmail.com");
     alert("paulocamachodev@gmail.com copied to clipboard");

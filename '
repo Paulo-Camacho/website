@@ -48,18 +48,15 @@
             <p><a href="#" onclick="openSection('greeter-a')">hey,_I'm Paulo!</a></p>
             <p><a href="#" onclick="openSection('blogposts')" style="text-decoration: underline;">blogposts</a></p>
 
-
-            <p><a href="#" onclick="openSection('photos')">photos_that_i_enjoy_looking_at</a></p>
-            <p><a href="#" onclick="openSection('social_media')">social_media</a></p>
-            <p><a href="#" onclick="emailToClipboard()">copy_my_email</a></p>
-            <p><a href="https://docs.google.com/document/d/1x3XaQzFeZpfBAf2bFHF-MFToyBIvtwav/edit" target="_blank">resume</a></p>
-
             <!--input blogposts data here-->
             <p>
                 <a href="https://www.linkedin.com/pulse/reducing-redundant-browser-work-open-source-software-maxun-camacho-z3oec/?trackingId=qqz8UTLAT4ORwNpQDkV2ig%3D%3D">
                     => Reducing Redundant Browser Work in Open-Source Software “Maxun”</a></p>
 
-
+            <p><a href="#" onclick="openSection('photos')">photos_that_i_enjoy_looking_at</a></p>
+            <p><a href="#" onclick="openSection('social_media')">social_media</a></p>
+            <p><a href="#" onclick="emailToClipboard()">copy_my_email</a></p>
+            <p><a href="https://docs.google.com/document/d/1x3XaQzFeZpfBAf2bFHF-MFToyBIvtwav/edit" target="_blank">resume</a></p>
         </div>
 
         <div id="photos" style="display: none;">
@@ -100,14 +97,12 @@
             <p><a href="#" onclick="openSection('blogposts')">blogposts</a></p>
             <p><a href="#" onclick="openSection('photos')">photos_that_i_enjoy_looking_at</a></p>
             <p><a href="#" onclick="openSection('social_media')" style="text-decoration: underline;">social_media</a></p>
+            <!--input social_media data here-->
+            <p><a href="https://www.linkedin.com/in/paulo-camacho-541670338/" target="_blank">• linkedin</a></p>
+            <p><a href="https://github.com/Paulo-Camacho" target="_blank">• github</a></p>
 
             <p><a href="#" onclick="emailToClipboard()">copy_my_email</a></p>
             <p><a href="https://docs.google.com/document/d/1x3XaQzFeZpfBAf2bFHF-MFToyBIvtwav/edit" target="_blank">resume</a></p>
-
-            <!--input social_media data here-->
-            <p><a href="https://www.linkedin.com/in/paulo-camacho-541670338/" target="_blank">=> linkedin</a></p>
-            <p><a href="https://github.com/Paulo-Camacho" target="_blank">=> github</a></p>
-
         </div>
 
     </body>
