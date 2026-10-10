@@ -9,16 +9,16 @@
     <script src="script.js" defer></script>
     </head>
     <body>
-        <p id="header"><a href=""><i>Paulo</i></a></p>
-        <p style="text-align: center; margin-top: 8px;" id="la-time">Loading time in Los Angeles...</p>
+        <p id="header"><a href=""><i>Paulo Camacho</i></a></p>
+        <p style="text-align: center; margin-top: 0px;" id="la-time">Loading time in Los Angeles...</p>
         <br>
         <br>
 
-        <div id="greeter-a" style="display: inline; text-decoration: underline; "><p><a href="#" onclick="toggleAB('greeter-a', 'greeter-b');">
-        hey,_i'm <i>paulo!</i></a></p></div>
+        <div id="greeter-a" style="display: inline;"><p><a href="#" onclick="toggleAB('greeter-a', 'greeter-b');">
+        hey,_i'm Paulo!</a></p></div>
 
-        <div id="greeter-b" style="display: none;"><p><a href="#" onclick="toggleAB('greeter-a', 'greeter-b');">
-        hey,_i'm <i>paulo!</i></a></p>
+        <div id="greeter-b" style="display: none;"><p style="text-decoration: underline;"><a href="#" onclick="toggleAB('greeter-a', 'greeter-b');">
+        hey,_i'm Paulo!</a></p>
 
             <p>i like to consider myself curious. i enjoy optimizing workflows, learning about tools on linux/unix systems,
                 and contribute to open source!</p>
@@ -41,7 +41,7 @@
         </div>
 
         <div id="blogposts" style="display: none;">
-                <p><a href="#" onclick="toggleAB('list', 'blogposts')">blogposts</a></p>
+                <p><a href="#" onclick="toggleAB('list', 'blogposts')" style="text-decoration: underline;">blogposts</a></p>
 
                 <!--input blogposts data here-->
                 <p>
@@ -56,7 +56,7 @@
 
         <div id="photos" style="display: none;">
                 <p><a href="#" onclick="toggleAB('photos', 'blogposts')">blogposts</a></p>
-                <p><a href="#" onclick="toggleAB('list', 'photos')">photos_that_i_enjoy_looking_at</a></p>
+                <p><a href="#" onclick="toggleAB('list', 'photos')" style="text-decoration: underline;">photos_that_i_enjoy_looking_at</a></p>
                 <!--input photo data here-->
                 <figure>
                     <img src="images/koi.jpeg" alt="Koi pond">
@@ -90,7 +90,7 @@
         <div id="social_media" style="display: none;">
                 <p><a href="#" onclick="toggleAB('social_media', 'blogposts')">blogposts</a></p>
                 <p><a href="#" onclick="toggleAB('social_media', 'photos')">photos_that_i_enjoy_looking_at</a></p>
-                <p><a href="#" onclick="toggleAB('list', 'social_media')">social_media</a></p>
+                <p><a href="#" onclick="toggleAB('list', 'social_media')" style="text-decoration: underline;">social_media</a></p>
                 <!--input social_media data here-->
                 <p><a href="https://www.linkedin.com/in/paulo-camacho-541670338/" target="_blank">• linkedin</a></p>
                 <p><a href="https://github.com/Paulo-Camacho" target="_blank">• github</a></p>

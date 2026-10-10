@@ -3,9 +3,9 @@ body {
     font-family: 'JetBrains Mono', monospace;
     /* margin : top right bottom left AUTO horizontally centers it in respects to parent container*/
     margin: 0 auto;
-    max-width: 250px;
+    max-width: 300px;
     /* padding: top left right bottom */
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     text-align: justify;
     /* text-align: center; */
     word-wrap: break-word;
@@ -15,11 +15,11 @@ body {
 }
 
 p {
-    padding-top: 3%;
+    padding-top: 2%;
 }
 
 @keyframes blurred {
-from { transform: scale(1.2); filter: blur(8px); }
+from { transform: scale(0.9); filter: blur(8px); }
 }
 
 html {
@@ -66,9 +66,6 @@ a:hover {
     color: #ffffff
 }
 /* selected link */
-a:active {
-    color: #ffffff;
-}
 
 figure {
     margin: 1.5rem auto;
@@ -107,8 +104,8 @@ img {
 
 @media (orientation: portrait) {
     body {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
         max-width: 400px;
         font-size: 0.8rem;
         animation: blurred 0.3s ease-out;
@@ -129,7 +126,7 @@ img {
         margin-top: 15vh;
         margin-top: 15svh;
         font-size: x-large;
-        max-width: 350px;
+        max-width: 625px;
     }
     #header {
         font-size: 5rem;
