@@ -18,22 +18,18 @@ p {
     padding-top: 2%;
 }
 
-@keyframes blurred {
-from { transform: scale(0.9); filter: blur(8px); }
-}
 
 html {
-    scrollbar-width: none;        /* Firefox, and Chrome/Edge 121+ */
+    scrollbar-width: none;        /* removes scrolling pill in Firefox, and Chrome/Edge 121+ */
 }
 html::-webkit-scrollbar {
     display: none;                /* Safari and older Chrome/Edge */
 }
 
-::-moz-selection { /* Code for Firefox */
+::-moz-selection { /* highlighted text white and makes actual text black */
     color: black;
     background: white;
 }
-
 ::selection {
     color: black;
     background: white;
@@ -133,4 +129,19 @@ img {
         margin-top: 10vh;
         margin-top: 10svh;
     }
+}
+
+ html::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: #ffffff; /* init */
+  opacity: 0;
+  pointer-events: none;
+  animation: greet-flash 700ms ease-out;
+}
+
+@keyframes greet-flash {
+  0%, 25% { opacity: 1; }    /* fully blank for the first 175ms */
 }
