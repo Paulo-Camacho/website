@@ -7,8 +7,7 @@ body {
     /* padding: top left right bottom */
     font-size: 0.9rem;
     text-align: justify;
-    /* text-align: center; */
-    word-wrap: break-word;
+    /* text-align: center; */ word-wrap: break-word;
     background: #000000;
     color: #ffffff;
     animation: blurred 0.4s ease-out;
@@ -139,9 +138,9 @@ img {
   background: #ffffff; /* init */
   opacity: 0;
   pointer-events: none;
-  animation: greet-flash 700ms ease-out;
+  animation: greet-flash 500ms ease-out;
 }
 
 @keyframes greet-flash {
-  0%, 25% { opacity: 1; }    /* fully blank for the first 175ms */
+  0%, 10%{ opacity: 1; }    /* fully blank for the first 175ms */
 }
