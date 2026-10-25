@@ -3,7 +3,7 @@ body {
     margin: 0 auto; /* margin : top right bottom left AUTO horizontally centers it in respects to parent container */
     padding-left: 1rem; /* 16px gutter so text never touches the screen edge */
     padding-right: 1rem;
-    max-width: 700px; /* same text column width as supreme */
+    max-width: 700px;
     font-size: 0.6875rem; /* 11px */
     letter-spacing: -0.3px; /* pulls chars slightly tighter */
     line-height: 1.08; /* 108%, tight rows */
@@ -113,10 +113,11 @@ img {
     body {
         margin-top: 15vh;
         margin-top: 15svh;
-        max-width: 874px; /* widing its column on big screens, text stays 11px */
+        font-size: 1rem; /* 11px */
+        max-width: 950px;
     }
     #header {
-        font-size: 4rem;
+        font-size: 3rem;
         margin-top: 10vh;
         margin-top: 10svh;
     }
