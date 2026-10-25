@@ -1,16 +1,20 @@
 body {
-    font-family: 'JetBrains Mono', monospace; /* I like Iosevka for programming and JetBrains to look at. */
-    margin: 0 auto; /* margin : top right bottom left AUTO horizontally centers it in respects to parent container*/
-    max-width: 275px;
-    font-size: 0.9rem; /* padding: top left right bottom */
-    text-align: justify;
+    font-family: 'Geist Mono', monospace; /* every char same width = grid */
+    margin: 0 auto; /* margin : top right bottom left AUTO horizontally centers it in respects to parent container */
+    padding-left: 1rem; /* 16px gutter so text never touches the screen edge */
+    padding-right: 1rem;
+    max-width: 700px; /* same text column width as supreme */
+    font-size: 0.6875rem; /* 11px */
+    letter-spacing: -0.3px; /* pulls chars slightly tighter */
+    line-height: 1.08; /* 108%, tight rows */
+    text-align: left; /* justify stretches spaces and breaks the column alignment */
     word-wrap: break-word; /* text-align: center; */
     background: #000000;
     color: #ffffff;
     animation: blurred 0.4s ease-out;
 }
 p {
-    padding-top: 2%;
+    margin: 0 0 0.5rem; /* 8px gap between paragraphs */
 }
 
 html {
@@ -30,10 +34,10 @@ html::-webkit-scrollbar {
 }
 
 #header {
-    font-weight: 800; 
+    font-weight: 700; /* heaviest weight */
     font-size: 2rem; 
     text-align: center;
-    margin-bottom: 0; 
+    margin-bottom: 0.25rem; /* small gap above the clock */
     margin-top: 12vh;
     margin-top: 12svh;
 }
@@ -84,7 +88,7 @@ img {
 #nasa-container iframe {
     width: 100%;
     aspect-ratio: 1 / 1;
-    object-fit: cover; /* CLean wrap around the desired box */
+    object-fit: cover; /* wrap around the desired box */
     display: block;
     margin: 0 auto;
     border-radius: 4px;
@@ -92,10 +96,6 @@ img {
 
 @media (orientation: portrait) {
     body {
-        padding-left: 2rem;
-        padding-right: 2rem;
-        max-width: 400px;
-        font-size: 0.8rem;
         animation: blurred 0.3s ease-out;
     }
     img {
@@ -113,8 +113,7 @@ img {
     body {
         margin-top: 15vh;
         margin-top: 15svh;
-        font-size: 2rem;
-        max-width: 550px;
+        max-width: 874px; /* widing its column on big screens, text stays 11px */
     }
     #header {
         font-size: 4rem;
