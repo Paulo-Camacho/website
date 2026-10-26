@@ -14,7 +14,8 @@ body {
     animation: blurred 0.4s ease-out;
 }
 p {
-    margin: 0 0 0.5rem; /* 8px gap between paragraphs */
+    margin: 0 auto 0.5rem; /* 8px gap between paragraphs, auto sides center the 70% column */
+    max-width: 70%;
 }
 
 html {
@@ -42,6 +43,12 @@ html::-webkit-scrollbar {
     margin-top: 12svh;
 }
 
+#la-time {
+    font-size: inherit; /* h2 defaults to 1.5em and bold, keep it body text sized */
+    font-weight: normal;
+    text-align: center;
+}
+
 a {
     text-decoration: none;
 }
@@ -61,6 +68,11 @@ a:hover {
 
 figure {
     margin: 1.5rem auto; /* these control the photos that i am sharing */
+}
+
+figcaption {
+    max-width: 600px; /* same box as img so the caption starts at the image's left edge */
+    margin: 0 auto 0.5rem;
 }
 
 img {
@@ -106,6 +118,12 @@ img {
     #header {
         margin-top: 15vh;
         margin-top: 15svh;
+    }
+    figcaption {
+        max-width: 350px; /* match the portrait img width */
+    }
+    p, h1, h2 {
+      max-width: 100%;
     }
 }
 
