@@ -4,7 +4,7 @@ body {
     padding-left: 1rem; /* 16px gutter so text never touches the screen edge */
     padding-right: 1rem;
     max-width: 700px;
-    font-size: 0.6875rem; /* 11px */
+    font-size: 0.8125rem; /* 13px */
     letter-spacing: -0.3px; /* pulls chars slightly tighter */
     line-height: 1.08; /* 108%, tight rows */
     text-align: left; /* justify stretches spaces and breaks the column alignment */
@@ -16,6 +16,7 @@ body {
 p {
     margin: 0 auto 0.5rem; /* 8px gap between paragraphs, auto sides center the 70% column */
     max-width: 70%;
+    padding: 0.25rem 0; /* 4px above and below each paragraph */
 }
 
 html {
@@ -109,6 +110,7 @@ img {
 @media (orientation: portrait) {
     body {
         animation: blurred 0.3s ease-out;
+        font-size: 0.8125rem; /* 13px */
     }
     img {
         max-width: 350px;
@@ -131,7 +133,7 @@ img {
     body {
         margin-top: 15vh;
         margin-top: 15svh;
-        font-size: 1rem; /* 11px */
+        font-size: 1.125rem; /* 18px */
         max-width: 950px;
     }
     #header {
