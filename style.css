@@ -1,5 +1,5 @@
 body {
-    width: min(500px, calc(100% - 16px));
+    width: min(500px, calc(100% - 32px));
     margin: 8px auto;
     padding-top: 24px;
     font-family: "Atkinson Hyperlegible", Arial, sans-serif;
@@ -43,6 +43,11 @@ footer p {
 
 .section:target {
     display: block;
+}
+
+#list .section > p:first-child {
+    margin: 1em 0;
+    text-align: right;
 }
 
 figure {
