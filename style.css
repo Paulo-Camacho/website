@@ -1,13 +1,14 @@
-    body {
-    width: min(500px, calc(100% - 32px));
-    margin: 8px auto;
-    padding-top: 24px;
+body {
+    width: min(31.25rem, calc(100% - 2rem));
+    margin: 0.5rem auto;
+    padding-top: 1.5rem;
     font-family: "Atkinson Hyperlegible", Arial, sans-serif;
-    font-size: 16px;
+    font-size: 1rem;
     text-align: justify;
 }
 
 html {
+    font-size: clamp(100%, 0.8333vw, 150%);
     scrollbar-width: none;
 }
 
@@ -20,9 +21,16 @@ h1 a {
     text-decoration: none;
 }
 
+footer {
+  text-align: center;
+}
+
 #header {
     text-align: center;
-    text-transform: none;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.2;
 }
 
 #la-time {
@@ -32,7 +40,7 @@ h1 a {
     text-align: center;
 }
 
-footer p {
+nav p {
     text-align: center;
 }
 
@@ -55,7 +63,7 @@ figure {
 
 #photos img {
     width: 100%;
-    max-width: 500px;
+    max-width: 31.25rem;
     margin-inline: 0;
 }
 
@@ -65,7 +73,7 @@ figure {
 
 img {
     display: block;
-    width: 300px;
+    width: 18.75rem;
     max-width: 100%;
     height: auto;
     margin-inline: auto;
