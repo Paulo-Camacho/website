@@ -1,159 +1,68 @@
 body {
-    font-family: 'Geist Mono', monospace; /* every char same width = grid */
-    margin: 0 auto; /* margin : top right bottom left AUTO horizontally centers it in respects to parent container */
-    padding-left: 1rem; /* 16px gutter so text never touches the screen edge */
-    padding-right: 1rem;
-    max-width: 700px;
-    font-size: 0.8125rem; /* 13px */
-    letter-spacing: -0.3px; /* pulls chars slightly tighter */
-    line-height: 1.08; /* 108%, tight rows */
-    text-align: left; /* justify stretches spaces and breaks the column alignment */
-    word-wrap: break-word; /* text-align: center; */
-    background: #000000;
-    color: #ffffff;
-    animation: blurred 0.4s ease-out;
-}
-p {
-    margin: 0 auto 0.5rem; /* 8px gap between paragraphs, auto sides center the 70% column */
-    max-width: 70%;
-    padding: 0.25rem 0; /* 4px above and below each paragraph */
+    width: min(500px, calc(100% - 16px));
+    margin: 8px auto;
+    padding-top: 24px;
+    font-family: "Atkinson Hyperlegible", Arial, sans-serif;
+    font-size: 16px;
+    text-align: justify;
+    text-transform: lowercase;
 }
 
 html {
-    scrollbar-width: none; /* removes scrolling pill in Firefox, and Chrome/Edge 121+ */
-}
-html::-webkit-scrollbar {
-    display: none; /* safari and older chrome/Edge */
+    scrollbar-width: none;
 }
 
-::-moz-selection { /* highlighted text white and makes actual text black */
-    color: black;
-    background: white;
+html::-webkit-scrollbar {
+    display: none;
 }
-::selection {
-    color: black;
-    background: white;
+
+h1 a {
+    color: inherit;
+    text-decoration: none;
 }
 
 #header {
-    font-weight: 700; /* heaviest weight */
-    font-size: 2rem; 
     text-align: center;
-    margin-bottom: 0.25rem; /* small gap above the clock */
-    margin-top: 12vh;
-    margin-top: 12svh;
+    text-transform: none;
 }
 
 #la-time {
-    font-size: inherit; /* h2 defaults to 1.5em and bold, keep it body text sized */
+    margin: 1em 0;
+    font-size: inherit;
     font-weight: normal;
     text-align: center;
 }
 
-a {
-    text-decoration: none;
-}
-/* unvisited link */
-a:link {
-    color: #ffffff;
-}
-/* visited link */
-a:visited {
-    color: #ffffff;
-}
-/* mouse over link */
-a:hover {
-    background: #ff6900;
-    color: #ffffff
-}
-
-figure {
-    margin: 1.5rem auto; /* these control the photos that i am sharing */
-}
-
-figcaption {
-    max-width: 600px; /* same box as img so the caption starts at the image's left edge */
-    margin: 0 auto 0.5rem;
-}
-
-img {
-    max-width: 600px;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-    width: 100%;
-    height: auto;
-    display: block; /* needed for margin auto to center properly */
-    margin: 0 auto;
-    object-fit: cover; /* prevents stretching, keeps original shape */
-    /* aspect-ratio: 1 / 1; */
-}
-
-#nasa-container {
-    display: block;
-    margin: 1.5rem auto;
+footer p {
     text-align: center;
 }
 
-/* Square output of nasa api, be that video or image */
-#nasa-container img,
-#nasa-container video,
-#nasa-container iframe {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: cover; /* wrap around the desired box */
+.section {
+    display: none;
+}
+
+.section:target {
     display: block;
-    margin: 0 auto;
-    border-radius: 4px;
 }
 
-@media (orientation: portrait) {
-    body {
-        animation: blurred 0.3s ease-out;
-        font-size: 0.8125rem; /* 13px */
-    }
-    img {
-        max-width: 350px;
-        width: 100%;
-        height: auto;
-    }
-    #header {
-        margin-top: 15vh;
-        margin-top: 15svh;
-    }
-    figcaption {
-        max-width: 350px; /* match the portrait img width */
-    }
-    p, h1, h2 {
-      max-width: 100%;
-    }
+figure {
+    margin-inline: 0;
 }
 
-@media screen and (min-width: 1920px) {
-    body {
-        margin-top: 15vh;
-        margin-top: 15svh;
-        font-size: 1.125rem; /* 18px */
-        max-width: 950px;
-    }
-    #header {
-        font-size: 3rem;
-        margin-top: 10vh;
-        margin-top: 10svh;
-    }
+#photos img {
+    width: 100%;
+    max-width: 500px;
+    margin-inline: 0;
 }
 
- html::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  background: #ffffff; /* init */
-  opacity: 0;
-  pointer-events: none;
-  animation: greet-flash 500ms ease-out;
+#photos figcaption {
+    text-align: left;
 }
 
-@keyframes greet-flash {
-  0%, 10%{ opacity: 1; }
+img {
+    display: block;
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    margin-inline: auto;
 }

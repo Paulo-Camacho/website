@@ -1,123 +1,85 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
         <title>Paulo Camacho</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
         <script src="script.js" defer></script>
     </head>
     <body>
-        <h1 id="header"><a href="#"><i>Paulo Camacho</i></a></h1>
-        <h2 id="la-time">Loading time in Los Angeles...</h2>
-        <br>
+        <h1 id="header"><a href="#">Paulo Camacho</a></h1>
+        <h2 id="la-time" aria-label="Current time in Los Angeles">Loading Los Angeles time...</h2>
 
-        <!-- This is the the defualt state of the app div. Whatever the user clicks gets passed into openSection, which hides whichever section is open and shows the clicked one -->
-        <div id="list" style="display: inline;">
-            <p class="bullet"><a href="#" onclick="openSection('greeter-a')">hey,_I'm Paulo!</a></p>
-            <p class="bullet"><a href="#" onclick="openSection('blogposts')">blogposts</a></p>
-            <p class="bullet"><a href="#" onclick="openSection('photos')">photos_that_i_enjoy_looking_at</a></p>
-            <p class="bullet"><a href="#" onclick="openSection('social_media')">social_media</a></p>
-            <p class="bullet"><a href="#" onclick="emailToClipboard()">copy_my_email</a></p>
-            <p class="bullet"><a href="https://docs.google.com/document/d/1x3XaQzFeZpfBAf2bFHF-MFToyBIvtwav/edit" target="_blank">resume</a></p>
-        </div>
-        <div id="greeter-a" style="display: none;"><p class="bullet" style="text-decoration: underline;"><a href="#" onclick="openSection('greeter-a');">
-            hey,_I'm Paulo!</a></p>
+        <p>for the love of learning</p>
+        <div id="list">
+            <p class="bullet"><a href="#greeter-a">hey,_I'm Paulo!</a></p>
+            <div id="greeter-a" class="section">
+                <p><a href="#" aria-label="Close about section">close section</a></p>
+                <p>i like to consider myself curious. i enjoy optimizing workflows, learning about tools on linux/unix systems,
+                    and contribute to open source!</p>
+                <p>then i saw a 16k★ web scraper doing double the work it needed to. i refactored the engine to capture screenshots
+                    during the primary scraping pass instead of running a second browser navigation cut per page load times in half
+                    and got my code merged upstream!</p>
+                <p>went to a 48-hour hackathon, wired up EKG sensors to process biometric signals in real time, and walked away with
+                    first place!</p>
+                <p>currently competitive programming in ICPC, teaching python as a TA for CST 205</p>
+                <img src="images/profile.png" alt="Paulo">
+                <p></p>
+            </div>
 
-            <p>i like to consider myself curious. i enjoy optimizing workflows, learning about tools on linux/unix systems,
-                and contribute to open source!</p>
-            <p>then i saw a 16k★ web scraper doing double the work it needed to. i refactored the engine to capture screenshots
-                during the primary scraping pass instead of running a second browser navigation cut per page load times in half
-                and got my code merged upstream!</p>
-            <p>went to a 48-hour hackathon, wired up EKG sensors to process biometric signals in real time, and walked away with
-                first place!</p>
-            <p>currently competitive programming in ICPC, teaching python as a TA for CST 205</p>
-            <img src="images/profile.png" alt="Paulo" style="max-width: 300px;">
-            <p></p>
+            <p class="bullet"><a href="#blogposts">blogposts</a></p>
+            <div id="blogposts" class="section">
+                <p><a href="#" aria-label="Close blog posts section">close section</a></p>
+                <p><a href="https://www.linkedin.com/pulse/reducing-redundant-browser-work-open-source-software-maxun-camacho-z3oec/?trackingId=qqz8UTLAT4ORwNpQDkV2ig%3D%3D">
+                        => Reducing Redundant Browser Work in Open-Source Software “Maxun”</a>
+                </p>
+            </div>
 
-            <!-- START OF THE SAME PATTERN OF THE LIST -->
-            <p class="bullet"><a href="#" onclick="openSection('blogposts')">blogposts</a></p>
-            <p class="bullet"><a href="#" onclick="openSection('photos')">photos_that_i_enjoy_looking_at</a></p>
-            <p class="bullet"><a href="#" onclick="openSection('social_media')">social_media</a></p>
-            <p class="bullet"><a href="#" onclick="emailToClipboard()">copy_my_email</a></p>
-            <p class="bullet"><a href="https://docs.google.com/document/d/1x3XaQzFeZpfBAf2bFHF-MFToyBIvtwav/edit" target="_blank">resume</a></p>
-        </div> 
+            <p class="bullet"><a href="#photos">photos_that_i_enjoy_looking_at</a></p>
+            <div id="photos" class="section">
+                <p><a href="#" aria-label="Close photos section">close section</a></p>
+                <!--input photo data here-->
+                <figure>
+                    <figcaption aria-hidden="true">Koi fish pond</figcaption>
+                    <img src="images/koi.jpeg" alt="Koi pond">
+                </figure>
+                <figure>
+                    <figcaption aria-hidden="true">Mercury65</figcaption>
+                    <img src="images/mercury65.jpg" alt="Mercury65">
+                </figure>
 
-        <div id="blogposts" style="display: none;">
-            <p class="bullet"><a href="#" onclick="openSection('greeter-a')">hey,_I'm Paulo!</a></p>
-            <p class="bullet"><a href="#" onclick="openSection('blogposts')" style="text-decoration: underline;">blogposts</a></p>
-            <p><a href="https://www.linkedin.com/pulse/reducing-redundant-browser-work-open-source-software-maxun-camacho-z3oec/?trackingId=qqz8UTLAT4ORwNpQDkV2ig%3D%3D">
-                    => Reducing Redundant Browser Work in Open-Source Software “Maxun”</a>
-            </p>
+                <figure>
+                    <figcaption aria-hidden="true">Workstation</figcaption>
+                    <img src="images/tech.png" alt="Workstation">
+                </figure>
 
+                <figure>
+                    <figcaption aria-hidden="true">“Use your nicest things”</figcaption>
+                    <img src="images/use-your-things.jpg" alt="“Use your things”">
+                </figure>
 
-            <p class="bullet"><a href="#" onclick="openSection('photos')">photos_that_i_enjoy_looking_at</a></p>
-            <p class="bullet"><a href="#" onclick="openSection('social_media')">social_media</a></p>
-            <p class="bullet"><a href="#" onclick="emailToClipboard()">copy_my_email</a></p>
-            <p class="bullet"><a href="https://docs.google.com/document/d/1x3XaQzFeZpfBAf2bFHF-MFToyBIvtwav/edit" target="_blank">resume</a></p>
+                <figure>
+                    <figcaption aria-hidden="true">Havenhuis located in Antwerp, Belgium</figcaption>
+                    <img src="images/havenhuis.jpg" alt="havenhuis">
+                </figure>
+            </div>
 
-
-
-        </div>
-
-        <div id="photos" style="display: none;">
-            <p class="bullet"><a href="#" onclick="openSection('greeter-a')">hey,_I'm Paulo!</a></p>
-            <p class="bullet"><a href="#" onclick="openSection('blogposts')">blogposts</a></p>
-            <p class="bullet"><a href="#" onclick="openSection('photos')" style="text-decoration: underline;">photos_that_i_enjoy_looking_at</a></p>
-            <!--input photo data here-->
-            <figure>
-                <figcaption aria-hidden="true">Koi fish pond</figcaption>
-                <img src="images/koi.jpeg" alt="Koi pond">
-            </figure>
-            <figure>
-                <figcaption aria-hidden="true">Mercury65</figcaption>
-                <img src="images/mercury65.jpg" alt="Mercury65">
-            </figure>
-
-            <figure>
-                <figcaption aria-hidden="true">Workstation</figcaption>
-                <img src="images/tech.png" alt="Workstation">
-            </figure>
-
-            <figure>
-                <figcaption aria-hidden="true">“Use your nicest things”</figcaption>
-                <img src="images/use-your-things.jpg" alt="“Use your things”">
-            </figure>
-
-            <figure>
-                <figcaption aria-hidden="true">Havenhuis located in Antwerp, Belgium</figcaption>
-                <img src="images/havenhuis.jpg" alt="havenhuis">
-            </figure>
-            <p class="bullet"><a href="#" onclick="openSection('social_media')">social_media</a></p>
-            <p class="bullet"><a href="#" onclick="emailToClipboard()">copy_my_email</a></p>
-            <p class="bullet"><a href="https://docs.google.com/document/d/1x3XaQzFeZpfBAf2bFHF-MFToyBIvtwav/edit" target="_blank">resume</a></p>
         </div>
 
-        <div id="social_media" style="display: none;">
-            <p class="bullet"><a href="#" onclick="openSection('greeter-a')">hey,_I'm Paulo!</a></p>
-            <p class="bullet"><a href="#" onclick="openSection('blogposts')">blogposts</a></p>
-            <p class="bullet"><a href="#" onclick="openSection('photos')">photos_that_i_enjoy_looking_at</a></p>
-            <p class="bullet"><a href="#" onclick="openSection('social_media')" style="text-decoration: underline;">social_media</a></p>
-        <span>
-
+        <footer>
+            <hr>
             <p>
-            <a href="https://www.linkedin.com/in/paulo-camacho-541670338/" target="_blank">=> linkedin</a>
+                <a href="https://www.linkedin.com/in/paulo-camacho-541670338/">LinkedIn</a> -
+                <a href="https://github.com/Paulo-Camacho">GitHub</a> -
+                <a href="mailto:paulocamachodev@gmail.com">Email</a> -
+                <a href="https://docs.google.com/document/d/1x3XaQzFeZpfBAf2bFHF-MFToyBIvtwav/edit">Resume</a>
             </p>
-            <p>
-            <a href="https://github.com/Paulo-Camacho" target="_blank">=> github</a>
-
-            </p>
-        </span>
-
-            <p class="bullet"><a href="#" onclick="emailToClipboard()">copy_my_email</a></p>
-            <p class="bullet"><a href="https://docs.google.com/document/d/1x3XaQzFeZpfBAf2bFHF-MFToyBIvtwav/edit" target="_blank">resume</a></p>
-
-            <!--input social_media data here-->
-
-        </div>
+            <hr>
+        </footer>
 
     </body>
 </html>
