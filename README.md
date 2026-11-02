@@ -1,1 +1,1 @@
-a small, static personal website built with html, css, and a little JavaScript.
+a small static personal website built with html, css, and a little JavaScript.
