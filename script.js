@@ -12,11 +12,12 @@ function updateLATime() {
 
     const formatted = new Intl.DateTimeFormat("en-US", options)
         .format(new Date())
-        .replace(",", "");
+        .replace(",", "")
+        .toLowerCase();
     const clock = document.getElementById("la-time");
 
     if (clock) {
-        clock.textContent = `${formatted} LA`;
+        clock.textContent = `${formatted} la time`;
     }
 }
 
