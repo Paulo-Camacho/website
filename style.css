@@ -2,7 +2,7 @@ body {
     width: min(31.25rem, calc(100% - 2rem));
     margin: 0.5rem auto;
     padding-top: 1.5rem;
-    font-family: "Atkinson Hyperlegible", Arial, sans-serif;
+    font-family: "Atkinson Hyperlegible Mono", ui-monospace, Menlo, Consolas, monospace;
     font-size: 1rem;
     text-align: justify;
 }
