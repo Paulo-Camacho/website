@@ -4,12 +4,19 @@ body {
     padding-top: 1.5rem;
     font-family: "Atkinson Hyperlegible Mono", ui-monospace, Menlo, Consolas, monospace;
     font-size: 1rem;
-    text-align: justify;
+    text-align: left;
 }
 
 html {
+    color-scheme: dark;
+    background-color: #000;
+    color: #fff;
     font-size: clamp(100%, 0.8333vw, 150%);
     scrollbar-width: none;
+}
+
+a {
+    color: inherit;
 }
 
 html::-webkit-scrollbar {
