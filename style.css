@@ -29,7 +29,8 @@ footer {
 
 /* used to add white space in between html elements on the same line */
 span {
-  padding-left: 0.5rem;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
 }
 
 .options{
